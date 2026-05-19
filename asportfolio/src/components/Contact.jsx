@@ -1,20 +1,20 @@
 import { useState } from 'react'
 
-// ── Update these with your real links ─────────────────────────────────────
+
 const LINKS = [
   {
     label: 'GitHub',
     icon: '⌨',
     bg: '#000000',
     color: 'white',
-    href: 'https://github.com/yourusername',
+    href: 'https://github.com/angespr',
   },
   {
     label: 'LinkedIn',
     icon: 'in',
     bg: '#0a66c2',
     color: 'white',
-    href: 'https://linkedin.com/in/yourusername',
+    href: 'https://linkedin.com/in/angelinasprague',
   },
   {
     label: 'Email Me',

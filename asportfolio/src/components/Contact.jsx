@@ -3,11 +3,11 @@ import { useState } from 'react'
 
 const LINKS = [
   {
-    label: 'GitHub',
+    label: 'Devpost',
     icon: '⌨',
     bg: '#000000',
     color: 'white',
-    href: 'https://github.com/angespr',
+    href: 'https://devpost.com/angespr',
   },
   {
     label: 'LinkedIn',
@@ -15,13 +15,6 @@ const LINKS = [
     bg: '#0a66c2',
     color: 'white',
     href: 'https://linkedin.com/in/angelinasprague',
-  },
-  {
-    label: 'Email Me',
-    icon: '✉',
-    bg: 'linear-gradient(135deg, var(--pink), var(--purple))',
-    color: 'white',
-    href: 'mailto:your@email.com',
   },
 ]
 
@@ -85,7 +78,7 @@ function Contact() {
             transitionDelay: '0.1s',
           }}
         >
-          Interested in collaborating or hiring? Reach out!
+          Interested in hiring me or seeing what I'm up to? Reach out!
         </p>
 
         <div

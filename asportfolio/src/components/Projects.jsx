@@ -9,7 +9,7 @@ const PROJECTS = [
     tag: 'Security',
     tagColor: { bg: 'var(--pink-soft)', text: '#b84d8a' },
     iconBg: 'var(--pink-soft)',
-    // link: 'https://github.com/yourusername/project', // uncomment + add your link
+    // link: 'https://github.com/yourusername/project'
   },
   {
     icon: '✦',

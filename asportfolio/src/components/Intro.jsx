@@ -8,7 +8,7 @@ const PHRASES = [
 ]
 
 const COLORS = ['#9d84c9', '#f79bc7', '#f3cc98', '#b8a8e0', '#f5b8d8']
-const NAME = 'ANGELINA MEIHOA'
+const NAME = 'ANGELINA SPRAGUE'
 
 function IntroCanvas({ wrapRef, canvasRef }) {
   useEffect(() => {
@@ -109,7 +109,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       }
     }
 
-    // ── draw 4-point star ──
+    // Star Shape
     function drawStar(cx, cy, r, spin, color, alpha, ch, size) {
       ctx.save()
       ctx.globalAlpha = alpha
@@ -137,7 +137,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       ctx.restore()
     }
 
-    // ── rocket ──
+    // Rocket Shape
     function rocketAngle() {
       return Math.atan2(mouse.x - W / 2, (H - 28) - mouse.y)
     }
@@ -146,7 +146,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       ctx.save()
       ctx.translate(cx, cy)
       ctx.rotate(angle)
-      // body
+      // the body
       ctx.beginPath()
       ctx.moveTo(0, -15)
       ctx.bezierCurveTo(6, -9, 7, 0, 6, 9)
@@ -155,7 +155,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       ctx.closePath()
       ctx.fillStyle = '#9d84c9'
       ctx.fill()
-      // window
+      // tiny window
       ctx.beginPath()
       ctx.arc(0, -3, 3.5, 0, Math.PI * 2)
       ctx.fillStyle = '#ede9f8'
@@ -185,7 +185,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       ctx.ellipse(0, 13 * flicker, 4, 8 * flicker, 0, 0, Math.PI * 2)
       ctx.fillStyle = g
       ctx.fill()
-      // aim dash
+      // aim pointer guide
       ctx.setLineDash([3, 8])
       ctx.strokeStyle = 'rgba(157,132,201,0.22)'
       ctx.lineWidth = 1
@@ -197,7 +197,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       ctx.restore()
     }
 
-    // ── shoot ──
+    // shoot / trigger
     function shoot(mx, my) {
       const ox = W / 2, oy = H - 28
       const dx = mx - ox, dy = my - oy
@@ -210,7 +210,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       })
     }
 
-    // ── burst ──
+    // let shoot go
     function burst(x, y, color, ch) {
       for (let i = 0; i < 16; i++) {
         const angle = (Math.PI * 2 / 16) * i + Math.random() * 0.3
@@ -241,7 +241,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       }
     }
 
-    // ── main loop ──
+    // main loop
     function loop() {
       animId = requestAnimationFrame(loop)
       ctx.clearRect(0, 0, W, H)
@@ -249,11 +249,11 @@ function IntroCanvas({ wrapRef, canvasRef }) {
 
       const done = allRevealed()
 
-      // spawn sparkles — denser after win
+      // spawn sparkles after win
       const letterAlive  = sparkles.filter(s => s.alive && !s.deco).length
       const decoAlive    = sparkles.filter(s => s.alive &&  s.deco).length
       const letterTarget = done ? 0  : 7
-      const decoTarget   = done ? 14 : 5   // dense after win
+      const decoTarget   = done ? 14 : 5  
 
       if (frame % 35 === 0) {
         if (!done && letterAlive < letterTarget) {
@@ -278,7 +278,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       })
       sparkles = sparkles.filter(s => s.alive)
 
-      // bullets — always active
+      // bullets
       bullets.forEach(b => {
         if (!b.alive) return
         b.trail.push({ x: b.x, y: b.y })
@@ -318,7 +318,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
       particles.forEach(p => { updateP(p); drawP(p) })
       particles = particles.filter(p => p.alpha > 0.02)
 
-      // rocket — always visible
+      // rocket 
       drawRocket(W / 2, H - 28, rocketAngle())
     }
 
@@ -355,7 +355,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
   return null
 }
 
-// ── Typing effect hook ─────────────────────────────────────────────────────
+// Typing loop
 function useTyping(ref) {
   useEffect(() => {
     let pi = 0, ci = 0, deleting = false, timer
@@ -381,7 +381,6 @@ function useTyping(ref) {
   }, [ref])
 }
 
-// ── Intro ──────────────────────────────────────────────────────────────────
 function Intro() {
   const wrapRef   = useRef(null)
   const canvasRef = useRef(null)
@@ -419,7 +418,7 @@ function Intro() {
         }}
       >
 
-        {/* ── GAME CARD ─────────────────────────────────────────────────── */}
+        {/* Shooter game section */}
         <div
           ref={wrapRef}
           style={{
@@ -441,7 +440,6 @@ function Intro() {
             }}
           />
 
-          {/* ── NAME LAYOUT (sits over canvas) ── */}
           <div
             style={{
               position: 'absolute',
@@ -458,7 +456,7 @@ function Intro() {
           >
             
 
-            {/* Middle: brace + rocket slots (game name) + brace */}
+            {/* Middle: brace + rocket slots*/}
             <div
               style={{
                 display: 'flex',
@@ -483,7 +481,7 @@ function Intro() {
                 {'{'}
               </span>
 
-              {/* letter slots — filled by canvas useEffect */}
+              {/* letter slots */}
               <div
                 id="rocket-slots"
                 style={{
@@ -513,13 +511,11 @@ function Intro() {
             </div>
           </div>
 
-       
-
           {/* mount canvas logic */}
           <IntroCanvas wrapRef={wrapRef} canvasRef={canvasRef} />
         </div>
 
-        {/* ── SUBTITLE ──────────────────────────────────────────────────── */}
+        {/* Subtitle */}
         <p
           style={{
             fontSize: '21px', fontWeight: 700, letterSpacing: '3px',
@@ -531,7 +527,7 @@ function Intro() {
           Cybersecurity &amp; Full-Stack Dev
         </p>
 
-        {/* ── TYPING ────────────────────────────────────────────────────── */}
+        {/* Typing*/}
         <div
           ref={typingRef}
           style={{
@@ -543,7 +539,7 @@ function Intro() {
           }}
         />
 
-        {/* ── BUTTONS ───────────────────────────────────────────────────── */}
+        {/* Buttons */}
         <div
           style={{
             display: 'flex', gap: '12px', justifyContent: 'center',

@@ -424,8 +424,9 @@ function Intro() {
           style={{
             position: 'relative',
             width: '100%',
-            borderRadius: '28px',
-            overflow: 'hidden',
+            height: 'min(500px, 60vh)',
+            minHeight: '500px',
+            overflow: 'visible',
             cursor: 'crosshair',
             userSelect: 'none',
           }}
@@ -434,7 +435,7 @@ function Intro() {
           <canvas
             ref={canvasRef}
             style={{ 
-                display: 'block', 
+                display: 'flex', 
                 width: '100%', 
                 height: 'min(500px, 60vh)',
             }}
@@ -469,10 +470,10 @@ function Intro() {
               <span
                 style={{
                   fontFamily: "'Neue Machina', sans-serif",
-                  fontSize: 'clamp(40px, 7vw, 70px)',
-                  paddingLeft: '35px',
+                  fontSize: 'clamp(20px, 7vw, 70px)',
+                  paddingRight: '80px',
                   fontWeight: 300,
-                  transform: 'scale(2)',
+                  transform: 'scale(4)',
                   color: '#9d84c9',
                   lineHeight: 1,
                   flexShrink: 0,
@@ -490,17 +491,17 @@ function Intro() {
                   alignItems: 'center',
                   gap: '2px',
                   flex: 1,
-                  transform: 'scale(1.25)'
+                  transform: 'scale(2.5)'
                 }}
               />
 
               <span
                 style={{
                   fontFamily: "'Neue Machina', sans-serif",
-                  fontSize: 'clamp(40px, 7vw, 70px)',
-                  paddingRight: '35px',
+                  fontSize: 'clamp(20px, 7vw, 70px)',
+                  paddingLeft: '70px',
                   fontWeight: 300,
-                  transform: 'scale(2)',
+                  transform: 'scale(4)',
                   color: '#9d84c9',
                   lineHeight: 1,
                   flexShrink: 0,

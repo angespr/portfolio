@@ -10,18 +10,18 @@ function Navbar() {
         background: 'rgba(255,245,245,0.82)',
         backdropFilter: 'blur(14px)',
         borderBottom: '1px solid rgba(157,132,201,0.18)',
-        padding: '14px 32px',
+        padding: '18px 32px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
       }}
     >
-      {/* Logo mark */}
+      {/* Small AS mark in corner */}
       <div
         style={{
           fontFamily: "'Neue Machina', 'Garet', sans-serif",
           fontWeight: 800,
-          fontSize: '18px',
+          fontSize: '20px',
           color: 'var(--purple)',
           display: 'flex',
           alignItems: 'center',
@@ -33,7 +33,7 @@ function Navbar() {
         <span style={{ fontWeight: 300, fontSize: '22px' }}>{`}`}</span>
       </div>
 
-      {/* Links */}
+      {/* quick links to rest of page */}
       <div style={{ display: 'flex', gap: '24px' }}>
         {['about', 'skills', 'projects', 'contact'].map((id) => (
           <button
@@ -44,7 +44,7 @@ function Navbar() {
               border: 'none',
               cursor: 'pointer',
               fontFamily: "'Garet', sans-serif",
-              fontSize: '13px',
+              fontSize: '19px',
               fontWeight: 700,
               letterSpacing: '0.5px',
               color: 'var(--muted)',

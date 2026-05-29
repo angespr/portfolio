@@ -8,7 +8,7 @@ const PHRASES = [
 ]
 
 const COLORS = ['#9d84c9', '#f79bc7', '#f3cc98', '#b8a8e0', '#f5b8d8']
-const NAME = 'ANGELINA SPRAGUE'
+const NAME = 'ANGELINA MEIHOA'
 
 function IntroCanvas({ wrapRef, canvasRef }) {
   useEffect(() => {
@@ -57,7 +57,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
 
     function allRevealed() { return revealed.every(Boolean) }
 
-    // ── resize ──
+    // resize 
     function resize() {
       W = canvas.width  = wrap.clientWidth
       H = canvas.height = wrap.clientHeight
@@ -85,7 +85,7 @@ function IntroCanvas({ wrapRef, canvasRef }) {
         y: yMin + Math.random() * (yMax - yMin),
         ch,
         color: COLORS[Math.floor(Math.random() * COLORS.length)],
-        size: 10 + Math.random() * 8,
+        size: 15 + Math.random() * 10,
         vx: (Math.random() - 0.5) * 0.7,
         vy: (Math.random() - 0.5) * 0.7,
         spin: Math.random() * Math.PI * 2,
@@ -397,13 +397,14 @@ function Intro() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '100px 32px 60px',
+        padding: '0px 24px 20px',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
       {/* Page-level gradient background */}
       <div className="gradient-bg" style={{ position: 'absolute', inset: 0, zIndex: 0 }} />
+
 
       <div
         style={{
@@ -418,14 +419,28 @@ function Intro() {
         }}
       >
 
+        {/* Floating side bubbles */}
+        <div className="floating-bubbles left">
+          <span />
+          <span />
+          <span />
+        </div>
+
+        <div className="floating-bubbles right">
+          <span />
+          <span />
+          <span />
+        </div>
+
+        
         {/* Shooter game section */}
         <div
           ref={wrapRef}
           style={{
             position: 'relative',
-            width: '100%',
-            height: 'min(500px, 60vh)',
-            minHeight: '500px',
+            width: '150%',
+            height: 'min(700px, 75vh)',
+            minHeight: '700px',
             overflow: 'visible',
             cursor: 'crosshair',
             userSelect: 'none',
@@ -437,7 +452,7 @@ function Intro() {
             style={{ 
                 display: 'flex', 
                 width: '100%', 
-                height: 'min(500px, 60vh)',
+                height: 'min(800px, 75vh)',
             }}
           />
 
@@ -452,12 +467,10 @@ function Intro() {
               alignItems: 'center',
               justifyContent: 'space-between',
               pointerEvents: 'none',
-              padding: '100px 24px 20px',
+              padding: '150px 24px 20px',
             }}
           >
             
-
-            {/* Middle: brace + rocket slots*/}
             <div
               style={{
                 display: 'flex',
@@ -471,7 +484,8 @@ function Intro() {
                 style={{
                   fontFamily: "'Neue Machina', sans-serif",
                   fontSize: 'clamp(20px, 7vw, 70px)',
-                  paddingRight: '80px',
+                  paddingTop: '32px',
+                  paddingLeft: '40px',
                   fontWeight: 300,
                   transform: 'scale(4)',
                   color: '#9d84c9',
@@ -491,7 +505,7 @@ function Intro() {
                   alignItems: 'center',
                   gap: '2px',
                   flex: 1,
-                  transform: 'scale(2.5)'
+                  transform: 'translateY(80px) scale(2.5)'
                 }}
               />
 
@@ -499,7 +513,8 @@ function Intro() {
                 style={{
                   fontFamily: "'Neue Machina', sans-serif",
                   fontSize: 'clamp(20px, 7vw, 70px)',
-                  paddingLeft: '70px',
+                  paddingTop: '32px',
+                  paddingRight: '60px',
                   fontWeight: 300,
                   transform: 'scale(4)',
                   color: '#9d84c9',
@@ -519,7 +534,7 @@ function Intro() {
         {/* Subtitle */}
         <p
           style={{
-            fontSize: '21px', fontWeight: 700, letterSpacing: '3px',
+            fontSize: '30px', fontWeight: 700, letterSpacing: '3px',
             fontFamily: "'Garet', sans-serif",
             textTransform: 'uppercase', color: 'var(--muted)',
             animation: 'fadeUp 0.7s 0.2s ease both',
@@ -532,7 +547,7 @@ function Intro() {
         <div
           ref={typingRef}
           style={{
-            fontSize: '16px', color: '#555', minHeight: '26px',
+            fontSize: '20px', color: '#555', minHeight: '26px',
             textAlign: 'center',
             fontFamily: "courier",
             fontWeight: 550,
@@ -583,10 +598,10 @@ function Intro() {
       <style>{`
         .rslot {
           font-family: 'Neue Machina', 'Garet', sans-serif;
-          font-size: clamp(15px, 9vw, 50px);
+          font-size: clamp(15px, 9vw, 40px);
           font-weight: 800;
           color: transparent;
-          -webkit-text-stroke: 1.5px rgba(157,132,201,0.35);
+          -webkit-text-stroke: 1.5px rgba(58, 22, 119, 0.35);
           letter-spacing: -1px;
           display: inline-block;
           transition: color 0.35s ease, -webkit-text-stroke 0.35s ease;
@@ -599,6 +614,75 @@ function Intro() {
         @keyframes rslotPop {
           from { transform: scale(0.5) rotate(-8deg); opacity: 0; }
           to   { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .floating-bubbles {
+          position: absolute;
+          top: 40%;
+          transform: translateY(-50%);
+          width: 120px;
+          height: 500px;
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        .floating-bubbles.left {
+          left: -450px;
+          transform: scale(1.75);
+        }
+
+        .floating-bubbles.right {
+          right: -450px;
+          transform: scale(1.75);
+        }
+
+        .floating-bubbles span {
+          position: absolute;
+          display: block;
+          border-radius: 999px;
+          background: radial-gradient(
+            circle at 30% 30%,
+            rgba(255,255,255,0.9),
+            rgba(247,155,199,0.45),
+            rgba(157,132,201,0.18)
+          );
+          backdrop-filter: blur(4px);
+          box-shadow:
+            0 0 18px rgba(157,132,201,0.18),
+            inset 0 0 10px rgba(255,255,255,0.25);
+          animation: floatBubble 7s ease-in-out infinite;
+        }
+
+        /* Sizing + Placement */
+        .floating-bubbles span:nth-child(1) {
+          width: 70px;
+          height: 70px;
+          left: 20px;
+          animation-delay: 0s;
+        }
+
+        .floating-bubbles span:nth-child(2) {
+          width: 42px;
+          height: 42px;
+          left: 65px;
+          top: 160px;
+          animation-delay: 1.5s;
+        }
+
+        .floating-bubbles span:nth-child(3) {
+          width: 90px;
+          height: 90px;
+          left: 5px;
+          top: 270px;
+          animation-delay: 3s;
+        }
+
+        @keyframes floatBubble {
+          0% { transform: translateY(0px) translateX(0px); }
+          25% { transform: translateY(-12px) translateX(6px); }
+          50% { transform: translateY(-22px) translateX(-4px); }
+          75% { transform: translateY(-10px) translateX(8px); }
+          100% { transform: translateY(0px) translateX(0px); }
         }
       `}</style>
     </section>

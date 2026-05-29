@@ -1,31 +1,59 @@
 import { useState } from 'react'
+import juvo from '../assets/Juvo.png'
+import ulife from '../assets/U-Life.png'
+import derma from '../assets/DermaTech.png'
+import wildtrek from '../assets/Wildtrek.png'
 
-// ── Edit your projects here ────────────────────────────────────────────────
 const PROJECTS = [
-  {
-    icon: '🔐',
-    title: 'Cybersecurity Dashboard',
-    desc: 'Monitor security events and analytics in real-time.',
-    tag: 'Security',
-    tagColor: { bg: 'var(--pink-soft)', text: '#b84d8a' },
+ {
+    icon: juvo,
+    title: 'Juvo',
+    desc: 'A community platform to exchange services and skills directly, using their own talents instead of money.',
+    tags: [
+      { text: 'Community', bg: 'var(--pink-soft)', color: '#b84d8a' },
+      { text: 'Market System', bg: 'var(--pink-soft)', color: '#b84d8a'  },
+      { text: 'API', bg: 'var(--pink-soft)', color: '#b84d8a'  },
+    ],
     iconBg: 'var(--pink-soft)',
-    // link: 'https://github.com/yourusername/project'
+    link: ''
   },
   {
-    icon: '✦',
-    title: 'Portfolio Website',
-    desc: 'Modern responsive portfolio built with React + Vite.',
-    tag: 'Design',
-    tagColor: { bg: 'var(--purp-soft)', text: '#6b55a8' },
-    iconBg: 'var(--purp-soft)',
-  },
-  {
-    icon: '🐉',
-    title: 'D&D Campaign Manager',
-    desc: 'Organize campaigns, maps, and NPCs in one place.',
-    tag: 'Full-Stack',
-    tagColor: { bg: '#fef3e7', text: '#a0681a' },
+    icon: ulife,
+    title: 'U-Life',
+    desc: 'A student platform that helps college students stay organized, manage tasks, and discover opportunities in one place.',
+    tags: [
+      { text: 'Community', bg: '#fef3e7', color: '#a0681a' },
+      { text: 'Marketplace System', bg: '#fef3e7', color: '#a0681a'  },
+      { text: 'API', bg: '#fef3e7', color: '#a0681a' }
+    ],
     iconBg: '#fef3e7',
+    link: 'https://github.com/angespr/juvo'
+  },
+
+  {
+    icon: derma,
+    title: 'DermaTech',
+    desc: 'An AI-powered skin health platform to help users manage their skin health with accessible, empathetic technology.',
+    tags: [
+      { text: 'Community', bg: 'var(--purp-soft)', color: '#6b55a8' },
+      { text: 'Marketplace System', bg: 'var(--purp-soft)', color: '#6b55a8' },
+      { text: 'API', bg: 'var(--purp-soft)', color: '#6b55a8' },
+    ],
+    iconBg: '#f4edff',
+    link: 'https://github.com/angespr/DermaTech'
+  },
+
+  {
+    icon: wildtrek,
+    title: 'Wildtrek',
+    desc: 'An exploration social media platform that lets users capture, identify, and share nature photos to encourage outdoor discovery.',
+    tags: [
+      { text: 'Community', bg: 'var(--pink-soft)', color: '#b84d8a' },
+      { text: 'Marketplace System', bg: 'var(--pink-soft)', color: '#b84d8a'  },
+      { text: 'API', bg: 'var(--pink-soft)', color: '#b84d8a'  },
+    ],
+    iconBg: '#f4edff',
+    link: 'https://github.com/dumax315/WildTrek'
   },
 ]
 
@@ -52,7 +80,7 @@ function ProjectCard({ project, index }) {
         }}
         onClick={() => project.link && window.open(project.link, '_blank')}
       >
-        {/* Icon */}
+        {/* project icon */}
         <div
           style={{
             width: '46px',
@@ -66,7 +94,15 @@ function ProjectCard({ project, index }) {
             marginBottom: '16px',
           }}
         >
-          {project.icon}
+          <img
+            src={project.icon}
+            alt={project.title}
+            style={{
+              width: '40px',
+              height: '40px',
+              objectFit: 'contain',
+            }}
+          />
         </div>
 
         <h3
@@ -84,23 +120,35 @@ function ProjectCard({ project, index }) {
         <p style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.55 }}>
           {project.desc}
         </p>
-
-        <span
+          
+        <div
           style={{
-            display: 'inline-block',
+            display: 'flex',
+            gap: '6px',
+            flexWrap: 'wrap',
             marginTop: '14px',
-            background: project.tagColor.bg,
-            color: project.tagColor.text,
-            fontSize: '11px',
-            fontWeight: 700,
-            letterSpacing: '1px',
-            textTransform: 'uppercase',
-            padding: '4px 12px',
-            borderRadius: '100px',
           }}
         >
-          {project.tag}
-        </span>
+          {project.tags?.map((tag) => (
+            <span
+              key={tag.text}
+              style={{
+                display: 'inline-block',
+                fontSize: '11px',
+                fontWeight: 700,
+                letterSpacing: '1px',
+                textTransform: 'uppercase',
+                padding: '4px 12px',
+                borderRadius: '100px',
+                background: tag.bg,
+                color: tag.color,
+              }}
+            >
+              {tag.text}
+            </span>
+          ))}
+        </div>
+
       </div>
     </div>
   )
@@ -123,6 +171,7 @@ function Projects() {
             gap: '16px',
           }}
         >
+          {/* automakes new cards if more are needed */}
           {PROJECTS.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}

@@ -63,7 +63,7 @@ function About() {
             transitionDelay: '0.1s',
           }}
         >
-          {/* Gradient top bar */}
+          {/* window edging */}
           <div
             style={{
               position: 'absolute',
@@ -74,13 +74,13 @@ function About() {
           />
 
           <p style={{ fontSize: '16px', lineHeight: 1.78, color: '#3a2f3e', fontWeight: 400 }}>
-            Hi! I'm Angelina — an aspiring cybersecurity and full-stack
+            Hello! I'm Angelina, an aspiring cybersecurity and full-stack
             developer passionate about building creative, secure, and
             user-friendly digital experiences. I love finding where art meets
             engineering.
           </p>
 
-          {/* Stats */}
+          {/* some statistics for effect :) */}
           <div
             style={{
               display: 'grid',
@@ -90,9 +90,9 @@ function About() {
             }}
           >
             {[
-              { label: 'Skills',    target: 8 },
-              { label: 'Projects',  target: 3 },
-              { label: 'Passion',   target: 100, suffix: '%' },
+              { label: 'Projects',  target: 5 },
+              { label: 'Hackathons', target: 4 },
+              { label: 'Passion', target: 100, suffix: '%' },
             ].map(({ label, target, suffix }) => (
               <div
                 key={label}

@@ -8,7 +8,7 @@ const PHRASES = [
 ]
 
 const COLORS = ['#9d84c9', '#f79bc7', '#f3cc98', '#b8a8e0', '#f5b8d8']
-const NAME = 'ANGELINA MEIHOA'
+const NAME = 'ANGELINA SPRAGUE'
 
 function IntroCanvas({ wrapRef, canvasRef }) {
   useEffect(() => {

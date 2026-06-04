@@ -55,8 +55,8 @@ function Navbar() {
               textTransform: 'capitalize',
               transition: 'color 0.2s',
             }}
-            onMouseEnter={(e) => (e.target.style.color = 'var(--purple)')}
-            onMouseLeave={(e) => (e.target.style.color = 'var(--muted)')}
+            onMouseEnter={(e) => (e.target.style.color = '#6a4fa3')} 
+            onMouseLeave={(e) => (e.target.style.color = '#9b89bb')}  
           >
             {id}
           </button>

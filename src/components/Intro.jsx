@@ -169,8 +169,8 @@ function Intro() {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      paddingTop: 'clamp(40px, 6vh, 80px)',
-      paddingBottom: '20px',
+      paddingTop: 'clamp(10px, 5vh, 80px)',
+      paddingBottom: '80px',
       position: 'relative',
       overflow: 'hidden',
       transform: 'translateY(clamp(-10px, -2vh, 0px))',
@@ -280,7 +280,7 @@ function Intro() {
                   alignItems: 'center',
                   gap: '2px',
                   flex: 1,
-                  transform: 'translateY(40px)',
+                  //transform: 'translateY(40px)',
                 }}
               >
                 {<img
@@ -291,8 +291,7 @@ function Intro() {
                     width: 'clamp(180px, 40vw, 520px)',
                     marginTop: 'clamp(-80px, -12vw, -150px)',
                     objectFit: 'contain',
-                    transform: 'translateY(40px)',
-                    transform: 'scale(2)'
+                    width: 'clamp(300px, 70vw, 1000px)',
                   }}
                 />}
               </div>
@@ -313,7 +312,7 @@ function Intro() {
             display: 'flex',
             justifyContent: 'center',
             height: 'auto',
-            marginTop: 'clamp(-70px, -10vw, -130px)',
+            marginTop: 'clamp(-110px, -10vw, -480px)',
             marginBottom: '10px',
           }}
         />

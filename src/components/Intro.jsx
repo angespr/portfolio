@@ -312,7 +312,7 @@ function Intro() {
             display: 'flex',
             justifyContent: 'center',
             height: 'auto',
-            marginTop: 'clamp(-110px, -10vw, -480px)',
+            marginTop: 'clamp(-140px, -10vw, -480px)',
             marginBottom: '10px',
           }}
         />

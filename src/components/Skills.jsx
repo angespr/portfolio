@@ -130,6 +130,13 @@ function Skills() {
           100% { transform: translateY(0px); }
         }
 
+        @media (max-width: 768px) {
+          .elements.left,
+          .elements.right {
+            display: none;
+          }
+        }
+
         .element-img {
           position: absolute;
           animation: floatY 4s ease-in-out infinite;

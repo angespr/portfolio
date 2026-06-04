@@ -48,7 +48,7 @@ function Navbar() {
               border: 'none',
               cursor: 'pointer',
               fontFamily: 'Courier, Monospace',
-              fontSize: 'clamp(13px, 1.6vw, 20px)',
+              fontSize: 'clamp(12px, 1.6vw, 20px)',
               fontWeight: 700,
               letterSpacing: '0px',
               color: '#9b89bb',

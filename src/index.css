@@ -7,6 +7,11 @@
 @tailwind utilities;
 */
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 :root {
   --cream:      #fff5f5;
   --gold:       #f3cc98;

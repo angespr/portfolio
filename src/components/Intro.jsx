@@ -169,7 +169,7 @@ function Intro() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        paddingTop: '45px',
+        paddingTop: '60px',
         padding: '0px 24px 20px',
         position: 'relative',
         overflow: 'hidden',

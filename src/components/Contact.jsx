@@ -37,7 +37,7 @@ function ContactButton({ label, icon, bg, color, href }) {
           background: bg,
           color,
           border: 'none',
-          padding: '14px 30px',
+          padding: 'clamp(8px, 8vw, 19px) clamp(16px, 4vw, 42px)',
           borderRadius: '100px',
           fontSize: '18px',
           fontWeight: 800,
@@ -99,7 +99,7 @@ function Contact() {
         <h2
           className="section-heading reveal"
           style={{
-            fontSize: '50px',
+            fontSize: 'clamp(32px, 6vw, 50px)',
             fontWeight: 800,
             textAlign: 'center',
           }}
@@ -124,7 +124,7 @@ function Contact() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '84px',
+            gap: 'clamp(16px, 4vw, 84px)',
             marginTop: '32px',
             position: 'relative',
           }}
@@ -143,6 +143,8 @@ function Contact() {
               justifyContent: 'center',
               gap: '12px',
               flexWrap: 'wrap',
+              padding: 'clamp(10px, 2vw, 14px) clamp(18px, 3vw, 30px)',
+              fontSize: 'clamp(14px, 2vw, 18px)',
             }}
           >
             {LINKS.map((link) => (
@@ -172,6 +174,11 @@ function Contact() {
           100% { transform: translateX(0px) scaleX(-1); }
         }
 
+        @media (max-width: 600px) {
+          .arrow-img {
+            display: none;
+          }
+        }
         .arrow-img {
           width: 110px;
           pointer-events: none;

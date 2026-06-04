@@ -25,16 +25,16 @@ function Navbar() {
         style={{
           fontFamily: "'Neue Machina', 'Garet', sans-serif",
           fontWeight: 800,
-          fontSize: '24px',
+          fontSize: 'clamp(18px, 2.2vw, 24px)',
           color: 'var(--purple)',
           display: 'flex',
           alignItems: 'center',
           gap: '4px',
         }}
       >
-        <span style={{ fontWeight: 300, fontSize: '22px' }}>{`{`}</span>
+        <span style={{ fontWeight: 300, fontSize: 'clamp(16px, 2vw, 22px)', }}>{`{`}</span>
         AS
-        <span style={{ fontWeight: 300, fontSize: '22px' }}>{`}`}</span>
+        <span style={{ fontWeight: 300, fontSize: 'clamp(16px, 2vw, 22px)', }}>{`}`}</span>
       </div>
 
       {/* quick links to rest of page */}
@@ -48,7 +48,7 @@ function Navbar() {
               border: 'none',
               cursor: 'pointer',
               fontFamily: 'Courier, Monospace',
-              fontSize: '20px',
+              fontSize: 'clamp(13px, 1.6vw, 20px)',
               fontWeight: 700,
               letterSpacing: '0px',
               color: '#9b89bb',

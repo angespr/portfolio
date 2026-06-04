@@ -111,7 +111,7 @@ function About() {
               background: 'white',
               borderRadius: '28px',
               border: '1px solid rgba(157,132,201,0.18)',
-              padding: '45px',
+              padding: 'clamp(20px, 4vw, 45px)',
               position: 'relative',
               overflow: 'hidden',
               minWidth: '320px',
@@ -135,14 +135,17 @@ function About() {
                 display: 'flex',
                 gap: '25px',
                 alignItems: 'center',
+                flexWrap: 'wrap', // photo drops below on small screens
+                justifyContent: 'center',
               }}
             >
               <div style={{ flex: 1 }}>
                 <p
                   style={{
-                    fontSize: '22px',
+                    fontSize: 'clamp(15px, 2vw, 22px)',
                     fontFamily: 'Rockwell, serif',
                     lineHeight: 1.85,
+                    minWidth: '200px',
                     color: '#3a2f3e',
                     margin: 0,
                   }}
@@ -158,7 +161,7 @@ function About() {
               {/* photo of me! */}
               <div
                 style={{
-                  width: '250px',
+                  width: 'clamp(120px, 30vw, 250px)',   //shrinks with screen
                   flexShrink: 0,
                 }}
               >
@@ -180,7 +183,7 @@ function About() {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))',
                 gap: '14px',
                 marginTop: '28px',
               }}

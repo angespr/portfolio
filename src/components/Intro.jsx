@@ -164,16 +164,17 @@ function Intro() {
  return (
     <section
       style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        paddingTop: '60px',
-        padding: '0px 24px 20px',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
+      minHeight: 'clamp(400px, 60vw, 100vh)',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      paddingTop: 'clamp(40px, 6vh, 80px)',
+      paddingBottom: '20px',
+      position: 'relative',
+      overflow: 'hidden',
+      transform: 'translateY(clamp(-10px, -2vh, 0px))',
+    }}
     >
       
       <svg width="0" height="0">
@@ -238,7 +239,7 @@ function Intro() {
             position: 'relative',
             width: '150%',
             maxWidth: '1600px',
-            height: '700px', 
+            height: 'clamp(400px, 60vw, 700px)',
             overflow: 'hidden', 
             userSelect: 'none',
           }}
@@ -286,13 +287,12 @@ function Intro() {
                   src={nameLogo}
                   alt="Angelina Sprague"
                   style={{
-                    height: '140px',
-                    width: 'auto',
-                    marginTop: '-150px',
+                    height: 'auto',
+                    width: 'clamp(180px, 40vw, 520px)',
+                    marginTop: 'clamp(-80px, -12vw, -150px)',
                     objectFit: 'contain',
                     transform: 'translateY(40px)',
-                    filter: 'drop-shadow(0 0 20px rgba(157,132,201,0.35))',
-                    transform: 'scale(6.5)'
+                    transform: 'scale(2)'
                   }}
                 />}
               </div>
@@ -308,12 +308,12 @@ function Intro() {
           src={lineImage}
           alt="divider line"
           style={{
-            width: '80vw',
-            maxWidth: '600px',
+            height: 'auto',
+            width: 'clamp(180px, 40vw, 600px)',
             display: 'flex',
             justifyContent: 'center',
             height: 'auto',
-            marginTop: '-130px',
+            marginTop: 'clamp(-70px, -10vw, -130px)',
             marginBottom: '10px',
           }}
         />
@@ -322,9 +322,9 @@ function Intro() {
         <div
           ref={typingRef}
           style={{
-            fontSize: '34px',
+            fontSize: 'clamp(18px, 3.2vw, 34px)',
             color: '#000000',
-            minHeight: '42px',
+            minHeight: 'clamp(28px, 4vw, 42px)',
             textAlign: 'center',
             fontFamily: 'courier',
             marginTop: '0px',
@@ -340,6 +340,7 @@ function Intro() {
             gap: '12px', 
             justifyContent: 'center',
             flexWrap: 'wrap',
+            gap: 'clamp(8px, 2vw, 12px)',
             animation: 'fadeUp 0.7s 0.4s ease both',
             marginTop: '20px',
           }}
@@ -350,10 +351,11 @@ function Intro() {
               background: 'var(--black)', 
               color: 'white', 
               border: 'none',
-              padding: '25px 75px', 
+              padding: 'clamp(14px, 2vw, 25px) clamp(30px, 6vw, 75px)',
+              fontSize: 'clamp(14px, 2vw, 18px)',
+              borderRadius: '999px',
               borderRadius: '100px',
               fontFamily: "'Garet', sans-serif", 
-              fontSize: '18px', 
               fontWeight: 800,
               letterSpacing: '0.5px', 
               cursor: 'pointer',
@@ -370,10 +372,11 @@ function Intro() {
               background: 'transparent', 
               color: 'var(--black)',
               border: '1.5px solid rgba(0,0,0,0.2)',
-              padding: '25px 75px', 
+              padding: 'clamp(14px, 2vw, 25px) clamp(30px, 6vw, 75px)',
+              fontSize: 'clamp(14px, 2vw, 18px)',
+              borderRadius: '999px',
               borderRadius: '100px',
               fontFamily: "'Garet', sans-serif", 
-              fontSize: '18px', 
               fontWeight: 800,
               letterSpacing: '0.5px', 
               cursor: 'pointer',
@@ -420,12 +423,12 @@ function Intro() {
         }
 
         .floating-bubbles.left {
-          left: -450px;
+          left: -480px;
           transform: scale(1.75);
         }
 
         .floating-bubbles.right {
-          right: -450px;
+          right: -480px;
           transform: scale(1.75) scaleX(-1);
         }
 

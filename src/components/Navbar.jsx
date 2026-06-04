@@ -4,18 +4,22 @@ function Navbar() {
   }
 
   return (
-    <nav
-      className="fixed top-0 w-full z-50"
-      style={{
-        background: 'rgba(255,245,245,0.82)',
-        backdropFilter: 'blur(14px)',
-        borderBottom: '1px solid rgba(157,132,201,0.18)',
-        padding: '18px 32px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
+<nav
+  className="z-50"
+  style={{
+    position: 'fixed', 
+    top: 0,
+    width: '100%',
+    zIndex: 50,
+    backdropFilter: 'blur(20px)',
+    background: '#fff5f5',
+    borderBottom: '1px solid rgba(157,132,201,0.18)',
+    padding: '12px 32px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  }}
+>
       {/* Small AS mark in corner */}
       <div
         style={{

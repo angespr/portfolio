@@ -168,7 +168,8 @@ function Intro() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
+        paddingTop: '45px',
         padding: '0px 24px 20px',
         position: 'relative',
         overflow: 'hidden',
@@ -237,7 +238,7 @@ function Intro() {
             position: 'relative',
             width: '150%',
             maxWidth: '1600px',
-            height: '705px', 
+            height: '625px', 
             overflow: 'hidden', 
             userSelect: 'none',
           }}
@@ -270,23 +271,7 @@ function Intro() {
                 width: '100%',
                 justifyContent: 'center',
               }}
-            >
-              <span
-                style={{
-                  fontFamily: "'Neue Machina', sans-serif",
-                  fontSize: 'clamp(20px, 7vw, 70px)',
-                  paddingTop: '0px',
-                  paddingRight: '65px',
-                  fontWeight: 300,
-                  transform: 'scale(5)',
-                  color: '#9d84c9',
-                  lineHeight: 1,
-                  flexShrink: 0,
-                }}
-              >
-                {'{'}
-              </span>
-              
+            >              
               <div
                 style={{
                   display: 'flex',
@@ -311,22 +296,6 @@ function Intro() {
                   }}
                 />}
               </div>
-
-              <span
-                style={{
-                  fontFamily: "'Neue Machina', sans-serif",
-                  fontSize: 'clamp(20px, 7vw, 70px)',
-                  paddingTop: '0px',
-                  paddingLeft: '65px',
-                  fontWeight: 300,
-                  transform: 'scale(5)',
-                  color: '#9d84c9',
-                  lineHeight: 1,
-                  flexShrink: 0,
-                }}
-              >
-                {'}'}
-              </span>
             </div>
           </div>
 
@@ -344,7 +313,7 @@ function Intro() {
             display: 'flex',
             justifyContent: 'center',
             height: 'auto',
-            marginTop: '-140px',
+            marginTop: '-90px',
             marginBottom: '10px',
           }}
         />

@@ -4,7 +4,7 @@ import Arrow from '../assets/arrow.png'
 const LINKS = [
   {
     label: 'Devpost',
-    icon: '⌨',
+    icon: '🕮',
     bg: '#9d84c9',
     color: 'white',
     href: 'https://devpost.com/angespr',
@@ -15,6 +15,13 @@ const LINKS = [
     bg: '#98c0f3',
     color: 'white',
     href: 'https://linkedin.com/in/angelinasprague',
+  },
+  {
+  label: 'Github',
+  icon: '⌨',
+  bg: '#f7bc73',
+  color: 'white',
+  href: 'https://linkedin.com/in/angelinasprague',
   },
 ]
 

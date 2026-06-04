@@ -238,7 +238,7 @@ function Intro() {
             position: 'relative',
             width: '150%',
             maxWidth: '1600px',
-            height: '625px', 
+            height: '700px', 
             overflow: 'hidden', 
             userSelect: 'none',
           }}
@@ -313,7 +313,7 @@ function Intro() {
             display: 'flex',
             justifyContent: 'center',
             height: 'auto',
-            marginTop: '-90px',
+            marginTop: '-130px',
             marginBottom: '10px',
           }}
         />

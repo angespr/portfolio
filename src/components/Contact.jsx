@@ -21,7 +21,7 @@ const LINKS = [
   icon: '⌨',
   bg: '#f7bc73',
   color: 'white',
-  href: 'https://linkedin.com/in/angelinasprague',
+  href: 'https://github.com/angespr',
   },
 ]
 

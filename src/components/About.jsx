@@ -205,7 +205,7 @@ function About() {
                   <AnimatedCount target={target} suffix={suffix} />
                   <p
                     style={{
-                      fontSize: '12px',
+                      fontSize: 'clamp(8px, 4vw, 12px)',
                       color: 'var(--muted)',
                       marginTop: '2px',
                       fontWeight: 700,
@@ -337,6 +337,17 @@ function About() {
           </div>
         </div>
       </div>
+      <style>{`
+        .animated-count {
+          font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+          .animated-count {
+            font-size: 8px;
+          }
+        }
+      `}</style>
     </section>
   )
 }

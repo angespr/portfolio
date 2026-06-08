@@ -40,7 +40,7 @@ function AnimatedCount({ target, suffix = '' }) {
       ref={ref}
       style={{
         fontFamily: "'Neue Machina', 'Garet', sans-serif",
-        fontSize: '30px',
+        fontSize: 'clamp(15px, 5vw, 30px)',
         fontWeight: 800,
         color: 'var(--purple)',
         display: 'block',
@@ -198,6 +198,7 @@ function About() {
                   style={{
                     background: 'var(--purp-soft)',
                     borderRadius: '16px',
+                    alignContent: 'center',
                     padding: '16px',
                     textAlign: 'center',
                   }}
@@ -205,7 +206,7 @@ function About() {
                   <AnimatedCount target={target} suffix={suffix} />
                   <p
                     style={{
-                      fontSize: 'clamp(8px, 4vw, 12px)',
+                      fontSize: 'clamp(8px, 4vw, 15px)',
                       color: 'var(--muted)',
                       marginTop: '2px',
                       fontWeight: 700,
@@ -338,13 +339,9 @@ function About() {
         </div>
       </div>
       <style>{`
-        .animated-count {
-          font-size: 12px;
-        }
-
         @media (max-width: 480px) {
           .animated-count {
-            font-size: 8px;
+            font-size: 11px;
           }
         }
       `}</style>

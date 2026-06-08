@@ -206,7 +206,7 @@ function About() {
                   <AnimatedCount target={target} suffix={suffix} />
                   <p
                     style={{
-                      fontSize: 'clamp(8px, 4vw, 15px)',
+                      fontSize: 'clamp(8px, 4vw, 12px)',
                       color: 'var(--muted)',
                       marginTop: '2px',
                       fontWeight: 700,

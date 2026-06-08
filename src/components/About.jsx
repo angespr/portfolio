@@ -201,7 +201,7 @@ function About() {
                     background: 'var(--purp-soft)',
                     borderRadius: '16px',
                     alignContent: 'center',
-                    padding: '16px',
+                    padding: '10px',
                     textAlign: 'center',
                   }}
                 >

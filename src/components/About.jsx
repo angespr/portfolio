@@ -186,6 +186,8 @@ function About() {
                 gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))',
                 gap: '14px',
                 marginTop: '28px',
+                textAlign: 'center',
+                alignContent: 'center',
               }}
             >
               {[

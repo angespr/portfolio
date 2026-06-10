@@ -237,9 +237,9 @@ function Intro() {
           ref={wrapRef}
           style={{
             position: 'relative',
-            width: '150%',
+            width: '160%',
             maxWidth: '1600px',
-            height: 'clamp(400px, 60vw, 700px)',
+            height: 'clamp(400px, 60vw, 600px)',
             overflow: 'hidden', 
             userSelect: 'none',
           }}
@@ -289,9 +289,9 @@ function Intro() {
                   style={{
                     height: 'auto',
                     width: 'clamp(180px, 40vw, 520px)',
-                    marginTop: 'clamp(-80px, -12vw, -150px)',
+                    marginTop: 'clamp(-100px, -12vw, -150px)',
                     objectFit: 'contain',
-                    width: 'clamp(300px, 70vw, 1000px)',
+                    width: 'clamp(300px, 70vw, 900px)',
                   }}
                 />}
               </div>
@@ -321,7 +321,7 @@ function Intro() {
         <div
           ref={typingRef}
           style={{
-            fontSize: 'clamp(18px, 3.2vw, 34px)',
+            fontSize: 'clamp(18px, 3.2vw, 32px)',
             color: '#000000',
             minHeight: 'clamp(28px, 4vw, 42px)',
             textAlign: 'center',
@@ -413,7 +413,7 @@ function Intro() {
 
         .floating-bubbles {
           position: absolute;
-          top: 40%;
+          top: 35%;
           transform: translateY(-50%);
           width: 120px;
           height: 500px;
@@ -422,13 +422,13 @@ function Intro() {
         }
 
         .floating-bubbles.left {
-          left: -480px;
-          transform: scale(1.75);
+          left: -430px;
+          transform: scale(1.5);
         }
 
         .floating-bubbles.right {
-          right: -480px;
-          transform: scale(1.75) scaleX(-1);
+          right: -430px;
+          transform: scale(1.5) scaleX(-1);
         }
 
         .floating-bubbles.right img {

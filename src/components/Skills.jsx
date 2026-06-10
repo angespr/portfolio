@@ -156,12 +156,12 @@ function Skills() {
 
         /* LEFT */
         .elements.left {
-          left: -380px;
+          left: -315px;
         }
 
         /* RIGHT - MIRROR */
         .elements.right {
-          right: -380px;
+          right: -315px;
           transform: translateY(-50%) scaleX(-1);
         }
 

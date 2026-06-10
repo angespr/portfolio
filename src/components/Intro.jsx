@@ -397,6 +397,7 @@ function Intro() {
           font-weight: 800;
           letter-spacing: -0.06em;
         }
+          
         .rslot-revealed {
           color: #1a1018 !important;
           -webkit-text-stroke: 0px transparent !important;
@@ -406,6 +407,7 @@ function Intro() {
             0 0 20px rgba(232, 222, 241, 0.89),
             0 10px 50px rgb(255, 255, 255);
           }
+
         @keyframes rslotPop {
           from { transform: scale(0.5) rotate(-8deg); opacity: 0; }
           to   { transform: scale(1) rotate(0deg); opacity: 1; }
@@ -464,13 +466,9 @@ function Intro() {
 
         @keyframes gradientFlow {
           0% { background-position: 0% 50%; }
-
           25% { background-position: 100% 50%; }
-
           50% { background-position: 100% 100%;}
-
           75% { background-position: 0% 100%;}
-
           100% { background-position: 0% 50%; }
         }
 

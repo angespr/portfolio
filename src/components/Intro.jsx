@@ -164,7 +164,7 @@ function Intro() {
  return (
     <section
       style={{
-      minHeight: 'clamp(400px, 60vw, 100vh)',
+      minHeight: 'clamp(400px, 60vh, 100vh)',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -237,11 +237,16 @@ function Intro() {
           ref={wrapRef}
           style={{
             position: 'relative',
-            width: '160%',
+            zIndex: 2,
+            width: '100%',
             maxWidth: '1600px',
-            height: 'clamp(400px, 60vw, 600px)',
-            overflow: 'hidden', 
+            padding: '0 clamp(1rem, 3vw, 3rem)',
+            height: 'clamp(400px, 60vw, 700px)',
             userSelect: 'none',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '10px',
           }}
         >
           <canvas
@@ -289,9 +294,9 @@ function Intro() {
                   style={{
                     height: 'auto',
                     width: 'clamp(180px, 40vw, 520px)',
-                    marginTop: 'clamp(-100px, -12vw, -150px)',
+                    marginTop: 'clamp(-80px, -12vw, -150px)',
                     objectFit: 'contain',
-                    width: 'clamp(300px, 70vw, 900px)',
+                    width: 'clamp(300px, 70vw, 1000px)',
                   }}
                 />}
               </div>
@@ -321,7 +326,9 @@ function Intro() {
         <div
           ref={typingRef}
           style={{
-            fontSize: 'clamp(18px, 3.2vw, 32px)',
+            position: 'relative',
+            zIndex: 10,
+            fontSize: 'clamp(18px, 3.2vw, 34px)',
             color: '#000000',
             minHeight: 'clamp(28px, 4vw, 42px)',
             textAlign: 'center',
@@ -335,6 +342,8 @@ function Intro() {
         {/* Buttons */}
         <div
           style={{
+            position: 'relative',
+            zIndex: 10,
             display: 'flex', 
             gap: '12px', 
             justifyContent: 'center',
@@ -397,7 +406,6 @@ function Intro() {
           font-weight: 800;
           letter-spacing: -0.06em;
         }
-          
         .rslot-revealed {
           color: #1a1018 !important;
           -webkit-text-stroke: 0px transparent !important;
@@ -407,7 +415,6 @@ function Intro() {
             0 0 20px rgba(232, 222, 241, 0.89),
             0 10px 50px rgb(255, 255, 255);
           }
-
         @keyframes rslotPop {
           from { transform: scale(0.5) rotate(-8deg); opacity: 0; }
           to   { transform: scale(1) rotate(0deg); opacity: 1; }
@@ -415,7 +422,7 @@ function Intro() {
 
         .floating-bubbles {
           position: absolute;
-          top: 35%;
+          top: 40%;
           transform: translateY(-50%);
           width: 120px;
           height: 500px;
@@ -424,13 +431,13 @@ function Intro() {
         }
 
         .floating-bubbles.left {
-          left: -430px;
-          transform: scale(1.5);
+          left: -480px;
+          transform: scale(1.75);
         }
 
         .floating-bubbles.right {
-          right: -430px;
-          transform: scale(1.5) scaleX(-1);
+          right: -480px;
+          transform: scale(1.75) scaleX(-1);
         }
 
         .floating-bubbles.right img {
@@ -466,9 +473,13 @@ function Intro() {
 
         @keyframes gradientFlow {
           0% { background-position: 0% 50%; }
+
           25% { background-position: 100% 50%; }
+
           50% { background-position: 100% 100%;}
+
           75% { background-position: 0% 100%;}
+
           100% { background-position: 0% 50%; }
         }
 

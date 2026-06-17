@@ -10,11 +10,11 @@ Error generating stack: `+e.message+`
         {/* Mobile media adjustment */}
         @media (max-width: 480px) {
           section {
-            padding-top: 8px !important;
+            padding-top: 80px !important;
           }
 
           .divider-line {
-            margin-top: -60px !important;
+            margin-top: -250px !important;
           }
         }
 

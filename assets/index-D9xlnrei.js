@@ -19,22 +19,21 @@ Error generating stack: `+e.message+`
         }
 
         @keyframes floatIcon {
-          0%   { transform: translateY(0px); }
-          25%  { transform: translateY(-6px); }
-          50%  { transform: translateY(-12px); }
-          75%  { transform: translateY(-6px); }
+          0% { transform: translateY(0px); }
+          25% { transform: translateY(-6px); }
+          50% { transform: translateY(-12px); }
+          75% { transform: translateY(-6px); }
           100% { transform: translateY(0px); }
         }
 
-        /* mobile tweak so it doesn’t crowd logo */
         @media (max-width: 480px) {
-        .divider-line {
-            margin-top: -250px !important;
-          } 
 
-        /* now show here */        
-        .icon-float-row {
-            display: flex; 
+          .divider-line {
+            margin-top: -250px !important;
+          }
+
+          .icon-float-row {
+            display: flex;
             position: absolute;
             top: 10px;
             left: 50%;

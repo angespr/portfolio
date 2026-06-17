@@ -12,10 +12,10 @@ Error generating stack: `+e.message+`
           margin-top: clamp(-120px, min(-12vh, -8vw), -60px);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
           .divider-line {
-            margin-top: -20px;
-            width: 80vw;
+            margin-top: -140px;
+            width: 180px;
           }
         }
 

@@ -35,19 +35,20 @@ Error generating stack: `+e.message+`
 
         /* now show here */        
         .icon-float-row {
-          position: absolute;
-          top: clamp(10px, 4vh, 60px); /* this controls that gap zone */
-          left: 50%;
-          transform: translateX(-50%);
-          display: flex;
-          align-items: center;
-          gap: clamp(10px, 2vw, 18px);
-          z-index: 3;
-          pointer-events: none;
-        }
+            display: flex; 
+            position: absolute;
+            top: 10px; /* adjust if needed */
+            left: 50%;
+            transform: translateX(-50%);
+            gap: 10px;
+            z-index: 5;
+            pointer-events: none;
+          }
 
           .icon-float-item {
-            width: 18px;
+            width: 20px;
+            height: auto;
+            animation: floatIcon 4s ease-in-out infinite;
           }
         }
 

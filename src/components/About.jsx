@@ -342,7 +342,11 @@ function About() {
       </div>
       <style>{`
         @media (max-width: 480px) {
-          .animated-count {
+        section {
+            margin-top: 30px !important;
+          }
+
+        .animated-count {
             font-size: 11px;
           }
         }

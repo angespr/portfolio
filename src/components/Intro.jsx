@@ -169,7 +169,7 @@ function Intro() {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      paddingTop: 'clamp(10px, 5vh, 80px)',
+      paddingTop: 'clamp(20px, 5vh, 0px)',
       paddingBottom: '80px',
       position: 'relative',
       overflow: 'hidden',
@@ -241,12 +241,13 @@ function Intro() {
             width: '100%',
             maxWidth: '1600px',
             padding: '0 clamp(1rem, 3vw, 3rem)',
-            height: 'clamp(400px, 60vw, 700px)',
+            height: 'min(80vw, clamp(350px, 80vh, 900px))',
             userSelect: 'none',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             gap: '10px',
+            //background: 'red'
           }}
         >
           <canvas
@@ -293,10 +294,9 @@ function Intro() {
                   alt="Angelina Sprague"
                   style={{
                     height: 'auto',
-                    width: 'clamp(180px, 40vw, 520px)',
-                    marginTop: 'clamp(-80px, -12vw, -150px)',
+                    width: 'min(70vw, clamp(300px, 100vh, 1000px))',
+                    marginTop: 'clamp(-30px, -5vh, -120px)',
                     objectFit: 'contain',
-                    width: 'clamp(300px, 70vw, 1000px)',
                   }}
                 />}
               </div>
@@ -311,13 +311,13 @@ function Intro() {
         <img
           src={lineImage}
           alt="divider line"
+          className="divider-line"
           style={{
             height: 'auto',
             width: 'clamp(180px, 40vw, 600px)',
             display: 'flex',
             justifyContent: 'center',
-            height: 'auto',
-            marginTop: 'clamp(-140px, -10vw, -480px)',
+            marginTop: 'min(10vw, clamp(-600px, 25vw, -130px))',
             marginBottom: '10px',
           }}
         />
@@ -400,6 +400,17 @@ function Intro() {
       </div>
 
       <style>{`
+        {/* Mobile media adjustment */}
+        @media (max-width: 480px) {
+          section {
+            margin-top: -300px !important;
+          }
+
+          .divider-line {
+            margin-top: -250px !important;
+          }
+        }
+
         .rslot {
           font-family: 'Neue Machina', 'Garet', sans-serif;
           font-size: clamp(150px, 15vw, 100px); 
@@ -431,12 +442,12 @@ function Intro() {
         }
 
         .floating-bubbles.left {
-          left: -480px;
+          left: -450px;
           transform: scale(1.75);
         }
 
         .floating-bubbles.right {
-          right: -480px;
+          right: -450px;
           transform: scale(1.75) scaleX(-1);
         }
 

@@ -403,11 +403,15 @@ function Intro() {
         {/* Mobile media adjustment */}
         @media (max-width: 480px) {
           section {
-            margin-top: -300px !important;
+            margin-top: -200px !important;
           }
 
           .divider-line {
-            margin-top: -250px !important;
+            margin-top: -90px !important;
+          }
+          
+          .floating-bubbles {
+            display: none !important;
           }
         }
 
@@ -442,12 +446,12 @@ function Intro() {
         }
 
         .floating-bubbles.left {
-          left: -450px;
+          left: clamp(-450px, -30vw, -250px);
           transform: scale(1.75);
         }
 
         .floating-bubbles.right {
-          right: -450px;
+          right: clamp(-450px, -30vw, -250px);
           transform: scale(1.75) scaleX(-1);
         }
 

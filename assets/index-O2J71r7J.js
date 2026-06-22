@@ -14,7 +14,7 @@ Error generating stack: `+e.message+`
           }
 
           .divider-line {
-            margin-top: 50px !important;
+            margin-top: -60px !important;
           }
           
           .floating-bubbles {

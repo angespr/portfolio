@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import closeIcon from '../assets/closewindow.png'
+import minimizeIcon from '../assets/minimizewindow.png'
+import maximizeIcon from '../assets/expandwindow.png'
 import juvo from '../assets/Juvo.png'
 import ulife from '../assets/U-Life.png'
 import derma from '../assets/DermaTech.png'
@@ -53,7 +56,7 @@ const PROJECTS = [
       { text: 'Metadata Mapping', bg: 'var(--pink-soft)', color: '#b84d8a'  },
       { text: 'Image Recognition', bg: 'var(--pink-soft)', color: '#b84d8a'  },
     ],
-    iconBg: '#f4edff',
+    iconBg: 'var(--pink-soft)',
     link: 'https://github.com/dumax315/WildTrek'
   },
 ]
@@ -96,59 +99,39 @@ function ProjectCard({ project, index }) {
             style={{
               display: 'flex',
               gap: '6px',
+              alignItems: 'center',
             }}
           >
-            <div
+            <img
+              src={minimizeIcon}
+              alt="Minimize"
               style={{
                 width: '18px',
                 height: '18px',
-                borderRadius: '5px',
-                border: '2px solid #9d84c9',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#9d84c9',
-                fontSize: '12px',
-                fontWeight: 100,
+                objectFit: 'contain',
               }}
-            >
-              −
-            </div>
+            />
 
-            <div
+            <img
+              src={maximizeIcon}
+              alt="Maximize"
               style={{
                 width: '18px',
                 height: '18px',
-                borderRadius: '5px',
-                border: '2px solid #9d84c9',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#9d84c9',
-                fontSize: '9px',
-                fontWeight: 100,
+                objectFit: 'contain',
               }}
-            >
-              □
-            </div>
+            />
 
-            <div
+            <img
+              src={closeIcon}
+              alt="Close"
               style={{
                 width: '18px',
                 height: '18px',
-                borderRadius: '5px',
-                border: '2px solid #9d84c9',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#9d84c9',
-                fontSize: '12px',
-                fontWeight: 100,
+                objectFit: 'contain',
               }}
-            >
-              ×
-            </div>
-          </div>
+            />
+          </div>  
         </div>
 
         <div

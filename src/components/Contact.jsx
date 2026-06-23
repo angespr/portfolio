@@ -3,11 +3,11 @@ import Arrow from '../assets/arrow.png'
 
 const LINKS = [
   {
-    label: 'Devpost',
-    icon: '🕮',
+    label: 'Email',
+    icon: '🖂',
     bg: '#9d84c9',
     color: 'white',
-    href: 'https://devpost.com/angespr',
+    href: 'mailto:angelinaspragueportfolio@gmail.com',
   },
   {
     label: 'LinkedIn',

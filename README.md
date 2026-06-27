@@ -1,6 +1,6 @@
 # :purple_heart: About My Portfolio 
 
-This is a personable, responsive portfolio website built with React and Vite to showcase my software engineering and cybersecurity projects, technical skills, leadership experience, and professional background!
+Hello! My name is Angelina and this is my portfolio website built with React and Vite to showcase my software engineering and cybersecurity projects, technical skills, leadership experience, and professional background!
 
 I chose a purple color palette because it reflects my personality. Purple represents creativity, curiosity, and ambition, qualities that I strive to bring to every project I create, and to every team I work with. My goal was to build a portfolio that feels both professional and uniquely my own while providing an easy way for visitors to explore my work, experiences, and passions. Please enjoy!
 

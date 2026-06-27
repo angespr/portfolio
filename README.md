@@ -42,7 +42,6 @@ portfolio/
 
 ## Future Improvements
 
-* Downloadable resume in About Me section
 * Add dark/light mode toggle
 * Improve accessibility
 * Add project filtering by category when there are more projects

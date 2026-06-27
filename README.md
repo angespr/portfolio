@@ -29,11 +29,14 @@ portfolio/
 ├── src/
 │   ├── assets/
 │   ├── components/
+│   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
+├── index.html
 ├── package.json
-└── README.md
+├── README.md
+└── vite.config.js
 ```
 
 ## Future Improvements

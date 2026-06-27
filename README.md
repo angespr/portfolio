@@ -64,10 +64,10 @@ University of Washington Bothell
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/portfolio.git
+git clone https://github.com/INSERTUSERNAMEHERE/portfolio.git
 ```
 
-Navigate to the project directory:
+Navigate to the project's directory:
 
 ```bash
 cd portfolio

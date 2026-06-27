@@ -1,16 +1,88 @@
-# React + Vite
+# My Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personable, responsive portfolio website built with React and Vite to showcase my software engineering and cybersecurity projects, technical skills, leadership experience, and professional background.
+I chose a purple color palette because it reflects my personality. Purple represents creativity, curiosity, and ambition, qualities that I strive to bring to every project I create, and to every team I work with. My goal was to build a portfolio that feels both professional and uniquely my own while providing an easy way for visitors to explore my work, experiences, and passions.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Responsive design for desktop and mobile devices
+* Interactive project showcase with GitHub links
+* About Me section highlighting my background
+* Technical skills and technologies
+* Quick access to LinkedIn, GitHub, and email
 
-## React Compiler
+## Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* Vite
+* JavaScript (ES6+)
+* HTML5
+* Tailwind CSS
+* CSS3
+* Git & GitHub
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+portfolio/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── package.json
+└── README.md
+```
+
+## Future Improvements
+
+* Downloadable resume in About Me section
+* Add dark/light mode toggle
+* Improve accessibility
+* Add project filtering by category when there are more projects
+* Enhance animations and user interactions
+* Integrate a functional contact form
+
+## Author
+
+**Angelina Sprague**
+
+B.S. in Computer Science & Software Engineering: Information Assurance & Cybersecurity
+University of Washington Bothell
+
+* LinkedIn: https://linkedin.com/in/angelinasprague
+* Portfolio: https://angespr.github.io/portfolio
+* GitHub: https://github.com/angespr
+
+## Want to Try it Out? Get Started Here!
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/portfolio.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```text
+http://localhost:5173
+```

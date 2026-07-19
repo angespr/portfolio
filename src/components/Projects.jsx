@@ -6,19 +6,47 @@ import juvo from '../assets/Juvo.png'
 import ulife from '../assets/U-Life.png'
 import derma from '../assets/DermaTech.png'
 import wildtrek from '../assets/Wildtrek.png'
+import capstone from '../assets/UrgencyMeetsObedience.png'
+import portfolio from "../assets/PersonalSite.png"
 
 const PROJECTS = [
+  {
+    icon: capstone,
+    title: 'Capstone Research Project',
+    desc: 'Urgency Meets Obedience: How identity and social expectations influence women’s responses to cybersecurity urgency cues.',
+    tags: [
+      { text: 'Academic Research', bg: 'var(--pink-soft)', color: '#b84d8a' },
+      { text: 'Cybersecurity', bg: 'var(--pink-soft)', color: '#b84d8a'  },
+      { text: 'Human Factors', bg: 'var(--pink-soft)', color: '#b84d8a' }
+    ],
+    iconBg: 'var(--pink-soft)',
+    link: 'https://angespr.github.io/CapstoneProject/'
+  },
+
  {
     icon: juvo,
     title: 'Juvo',
     desc: 'A community platform to exchange services and skills directly, using their own talents instead of money.',
     tags: [
-      { text: 'Service Exchange', bg: 'var(--pink-soft)', color: '#b84d8a' },
-      { text: 'React + API', bg: 'var(--pink-soft)', color: '#b84d8a'  },
-      { text: 'System Design', bg: 'var(--pink-soft)', color: '#b84d8a'  },
+      { text: 'Service Exchange', bg: '#fef3e7', color: '#a0681a' },
+      { text: 'React + API', bg: '#fef3e7', color: '#a0681a' },
+      { text: 'System Design', bg: '#fef3e7', color: '#a0681a' },
     ],
     iconBg: 'var(--pink-soft)',
     link: 'https://github.com/angespr/juvo'
+  },
+
+  {
+    icon: portfolio,
+    title: 'Personal Portfolio',
+    desc: '',
+    tags: [
+      { text: 'Personal Branding', bg: 'var(--purp-soft)', color: '#6b55a8'  },
+      { text: 'UI/UX Design Showcase', bg: 'var(--purp-soft)', color: '#6b55a8'  },
+      { text: 'Software Development', bg: 'var(--purp-soft)', color: '#6b55a8'  },
+    ],
+    iconBg: 'var(--pink-soft)',
+    link: 'https://github.com/angespr/portfolio'
   },
 
   {
@@ -26,9 +54,9 @@ const PROJECTS = [
     title: 'U-Life',
     desc: 'A student platform that helps college students stay organized, manage tasks, and discover opportunities in one place.',
     tags: [
-      { text: 'Student Success', bg: '#fef3e7', color: '#a0681a' },
-      { text: 'Productivity Tool', bg: '#fef3e7', color: '#a0681a'  },
-      { text: 'API Integration', bg: '#fef3e7', color: '#a0681a' }
+      { text: 'Student Success', bg: 'var(--pink-soft)', color: '#b84d8a' },
+      { text: 'Productivity Tool', bg: 'var(--pink-soft)', color: '#b84d8a'  },
+      { text: 'API Integration', bg: 'var(--pink-soft)', color: '#b84d8a' }
     ],
     iconBg: '#fef3e7',
     link: 'https://github.com/angespr/U-Life'
@@ -39,9 +67,9 @@ const PROJECTS = [
     title: 'DermaTech',
     desc: 'An AI-powered skin health platform to help users manage their skin health with accessible, empathetic technology.',
     tags: [
-      { text: 'AI Healthcare', bg: 'var(--purp-soft)', color: '#6b55a8' },
-      { text: 'User Analytics', bg: 'var(--purp-soft)', color: '#6b55a8' },
-      { text: 'Flask + API', bg: 'var(--purp-soft)', color: '#6b55a8' },
+      { text: 'AI Healthcare', bg: '#fef3e7', color: '#a0681a' },
+      { text: 'User Analytics', bg: '#fef3e7', color: '#a0681a' },
+      { text: 'Flask + API', bg: '#fef3e7', color: '#a0681a' },
     ],
     iconBg: '#f4edff',
     link: 'https://github.com/angespr/DermaTech'
@@ -52,9 +80,9 @@ const PROJECTS = [
     title: 'Wildtrek',
     desc: 'An exploration social media platform that lets users capture, identify, and share nature photos to encourage outdoor discovery.',
     tags: [
-      { text: 'Social Media', bg: 'var(--pink-soft)', color: '#b84d8a' },
-      { text: 'Metadata Mapping', bg: 'var(--pink-soft)', color: '#b84d8a'  },
-      { text: 'Image Recognition', bg: 'var(--pink-soft)', color: '#b84d8a'  },
+      { text: 'Social Media', bg: 'var(--purp-soft)', color: '#6b55a8' },
+      { text: 'Metadata Mapping', bg: 'var(--purp-soft)', color: '#6b55a8'  },
+      { text: 'Image Recognition', bg: 'var(--purp-soft)', color: '#6b55a8'  },
     ],
     iconBg: 'var(--pink-soft)',
     link: 'https://github.com/dumax315/WildTrek'

@@ -13,7 +13,7 @@ const PROJECTS = [
   {
     icon: capstone,
     title: 'Capstone Research Project',
-    desc: 'Urgency Meets Obedience: How identity and social expectations influence women’s responses to cybersecurity urgency cues.',
+    desc: 'How identity and social expectations influence women’s responses to cybersecurity urgency cues.',
     tags: [
       { text: 'Academic Research', bg: 'var(--pink-soft)', color: '#b84d8a' },
       { text: 'Cybersecurity', bg: 'var(--pink-soft)', color: '#b84d8a'  },
@@ -38,8 +38,8 @@ const PROJECTS = [
 
   {
     icon: portfolio,
-    title: 'Personal Portfolio',
-    desc: '',
+    title: 'My Personal Portfolio',
+    desc: 'The current site you are on, built to showcase my skills, projects, and experience.',
     tags: [
       { text: 'Personal Branding', bg: 'var(--purp-soft)', color: '#6b55a8'  },
       { text: 'UI/UX Design Showcase', bg: 'var(--purp-soft)', color: '#6b55a8'  },

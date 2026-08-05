@@ -21,21 +21,33 @@ function Navbar() {
   }}
 >
       {/* Small AS mark in corner */}
-      <div
-        style={{
-          fontFamily: "'Neue Machina', 'Garet', sans-serif",
-          fontWeight: 800,
-          fontSize: 'clamp(18px, 2.2vw, 24px)',
-          color: 'var(--purple)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '4px',
-        }}
-      >
-        <span style={{ fontWeight: 300, fontSize: 'clamp(16px, 2vw, 22px)', }}>{`{`}</span>
-        AS
-        <span style={{ fontWeight: 300, fontSize: 'clamp(16px, 2vw, 22px)', }}>{`}`}</span>
-      </div>
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      style={{
+        background: "none",
+        border: "none",
+        padding: 0,
+        cursor: "pointer",
+        fontFamily: "'Neue Machina', 'Garet', sans-serif",
+        fontWeight: 800,
+        fontSize: 'clamp(18px, 2.2vw, 24px)',
+        color: 'var(--purple)',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '4px',
+      }}
+      aria-label="Scroll to top"
+    >
+      <span style={{ fontWeight: 300, fontSize: 'clamp(16px, 2vw, 22px)' }}>
+        {"{"}
+      </span>
+
+      AS
+
+      <span style={{ fontWeight: 300, fontSize: 'clamp(16px, 2vw, 22px)' }}>
+        {"}"}
+      </span>
+    </button>
 
       {/* quick links to rest of page */}
       <div style={{ display: 'flex', gap: '24px' }}>

@@ -32,7 +32,7 @@ const PROJECTS = [
       { text: 'React + API', bg: '#fef3e7', color: '#a0681a' },
       { text: 'System Design', bg: '#fef3e7', color: '#a0681a' },
     ],
-    iconBg: 'var(--pink-soft)',
+    iconBg: '#fef3e7',
     link: 'https://github.com/angespr/juvo'
   },
 
@@ -41,11 +41,11 @@ const PROJECTS = [
     title: 'My Personal Portfolio',
     desc: 'The current site you are on, built to showcase my skills, projects, and experience.',
     tags: [
-      { text: 'Personal Branding', bg: 'var(--purp-soft)', color: '#6b55a8'  },
+      { text: 'Work Experience', bg: 'var(--purp-soft)', color: '#6b55a8'  },
       { text: 'UI/UX Design Showcase', bg: 'var(--purp-soft)', color: '#6b55a8'  },
       { text: 'Software Development', bg: 'var(--purp-soft)', color: '#6b55a8'  },
     ],
-    iconBg: 'var(--pink-soft)',
+    iconBg: 'var(--purp-soft)',
     link: 'https://github.com/angespr/portfolio'
   },
 
@@ -58,7 +58,7 @@ const PROJECTS = [
       { text: 'Productivity Tool', bg: 'var(--pink-soft)', color: '#b84d8a'  },
       { text: 'API Integration', bg: 'var(--pink-soft)', color: '#b84d8a' }
     ],
-    iconBg: '#fef3e7',
+    iconBg: 'var(--pink-soft)',
     link: 'https://github.com/angespr/U-Life'
   },
 
@@ -71,20 +71,20 @@ const PROJECTS = [
       { text: 'User Analytics', bg: '#fef3e7', color: '#a0681a' },
       { text: 'Flask + API', bg: '#fef3e7', color: '#a0681a' },
     ],
-    iconBg: '#f4edff',
+    iconBg: '#fef3e7',
     link: 'https://github.com/angespr/DermaTech'
   },
 
   {
     icon: wildtrek,
     title: 'Wildtrek',
-    desc: 'An exploration social media platform that lets users capture, identify, and share nature photos to encourage outdoor discovery.',
+    desc: 'An exploration social media platform that lets users capture, and share nature photos to encourage outdoor discovery.',
     tags: [
       { text: 'Social Media', bg: 'var(--purp-soft)', color: '#6b55a8' },
       { text: 'Metadata Mapping', bg: 'var(--purp-soft)', color: '#6b55a8'  },
       { text: 'Image Recognition', bg: 'var(--purp-soft)', color: '#6b55a8'  },
     ],
-    iconBg: 'var(--pink-soft)',
+    iconBg: 'var(--purp-soft)',
     link: 'https://github.com/dumax315/WildTrek'
   },
 ]
